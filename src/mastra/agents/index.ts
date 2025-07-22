@@ -2,7 +2,9 @@ import { MCPClient } from "@mastra/mcp";
 
 const mcp = new MCPClient({
   servers: {
-    // We'll add servers in the next steps
+    zapier: {
+      url: new URL(process.env.ZAPIER_MCP_URL || ""),
+    },
   },
 });
 
